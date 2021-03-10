@@ -1,8 +1,8 @@
 backend:
   name: github
   repo: coreyAdams1970/kick_it_up_a_notch
-  branch: master
-  
+  branch: main
+
 media_folder: content/assets
 public_folder: ../assets
 
