@@ -15,7 +15,7 @@ class IndexPage extends React.Component {
           title="Home"
           keywords={[`desert landscaping`, `landscaping`, `landscape design`, `arizona landscape design`]}
         />
-        <img style={{ margin: 0 }} src="./liz.jpg" alt="Gatsby Scene" />
+        <img style={{ margin: 0 }} src="./liz.jpeg" alt="liz martin" />
         <h1>
           Meet our Queen Bee: Liz (Hazel) Martin
           <span role="img" aria-label="wave emoji">
