@@ -1,21 +1,25 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Gatsby`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Kick It Up A Notch Alpine and Desert Design`,
+    author: `Corey Smaller`,
+    description: `landscape design in AZ and UT`,
+    siteUrl: `https://www.kickitupdesertdesign.com`,
     social: {
       twitter: `gatsbyjs`,
+      instagram: `kickitupanotch`
     },
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-feed-mdx`,
     {
       resolve: "gatsby-plugin-local-search",
       options: {

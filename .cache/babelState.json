@@ -21,10 +21,6 @@
           }
         },
         {
-          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-          "options": {}
-        },
-        {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -35,6 +31,10 @@
         {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
+        },
+        {
+          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
+          "options": {}
         }
       ],
       "presets": [
@@ -42,9 +42,9 @@
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
-            "allExtensions": false,
             "isTSX": false,
-            "jsxPragma": "React"
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         }
       ],
@@ -60,10 +60,6 @@
           "options": {}
         },
         {
-          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-          "options": {}
-        },
-        {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -73,6 +69,10 @@
         },
         {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
@@ -95,9 +95,9 @@
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
-            "allExtensions": false,
             "isTSX": false,
-            "jsxPragma": "React"
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         }
       ],
@@ -113,10 +113,6 @@
           "options": {}
         },
         {
-          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-          "options": {}
-        },
-        {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -126,6 +122,10 @@
         },
         {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
@@ -148,9 +148,9 @@
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
-            "allExtensions": false,
             "isTSX": false,
-            "jsxPragma": "React"
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         }
       ],
@@ -166,10 +166,6 @@
           "options": {}
         },
         {
-          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
-          "options": {}
-        },
-        {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
@@ -179,6 +175,10 @@
         },
         {
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/plugin-proposal-object-rest-spread/lib/index.js",
           "options": {}
         },
         {
@@ -201,9 +201,9 @@
           "name": "/Users/coreysmaller/code/kick_it_up_a_notch/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
             "plugins": [],
-            "allExtensions": false,
             "isTSX": false,
-            "jsxPragma": "React"
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         }
       ],
