@@ -20,10 +20,6 @@ export default function IndexPage(props) {
         title="Home"
         keywords={[`desert landscaping`, `landscaping`, `landscape design`, `arizona landscape design`]}
       />
-      <img style={{ margin: 0, width: 100, height: 100 }} src="./images/liz.jpeg" alt="liz martin" />
-
-      <h3 className="text-white">Welcome to Kick It Up A Notch.</h3>
     </Layout>
   )
-
 }

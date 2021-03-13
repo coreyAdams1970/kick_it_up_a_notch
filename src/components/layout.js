@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components";
-import { Button } from "react-bootstrap";
 import "./style.scss";
+import Logo from "../../static/images/logo.png";
 
 const rootPath = `${__PATH_PREFIX__}/`
 const blogPath = `${__PATH_PREFIX__}/blog/`
@@ -12,7 +12,7 @@ function Header({location}) {
     <>
       <div className="col-lg-1 col-4">
         <Link className="d-flex logo" to={location.pathname === blogPath ? `/` : `/`} >
-          <img src="./images/logo.png" class="float-left" />
+          <img src={Logo} class="float-left" />
         </Link>
       </div>
       <nav className="col-lg-11 col-8 mb-4 mt-0 text-right mt-5 pr-5">
@@ -63,29 +63,35 @@ const LayoutContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  background-color: #747474;
+  
   position: static;
   top: 0;
   left: 0;
 
+  a {
+    text-decoration: none !important;
+    box-shadow: none;
+    color: white;
+    padding: 10px;
+  }
+
+  a:hover{
+    color: #face11;
+  }
+
   .logo {
     img {
-      max-width: 150px;
-      max-height: 150px;
+      max-width: 175px;
+      max-height: 175px;
     }
   }
 
   nav {
-    height: 40px;
-
-    a{
-      text-decoration: none !important;
-      box-shadow:none;
-      color: white;
-      font-size: 22px;
-      font-family: Roboto san-serif;
-      padding: 10px;
-    }
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0px;
+    font-style: normal;
   }
 `;
 
