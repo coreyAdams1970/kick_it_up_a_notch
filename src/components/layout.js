@@ -1,18 +1,19 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components";
 import "./style.scss";
 import Logo from "../../static/images/logo.png";
+import classNames from "classnames";
 
 const rootPath = `${__PATH_PREFIX__}/`
 const blogPath = `${__PATH_PREFIX__}/blog/`
 
-function Header({location}) {
+function Header({ location}) {
   return (
     <>
       <div className="col-lg-1 col-4">
         <Link className="d-flex logo" to={location.pathname === blogPath ? `/` : `/`} >
-          <img src={Logo} class="float-left" />
+          <img src={Logo} className="float-left" />
         </Link>
       </div>
       <nav className="col-lg-11 col-8 mb-4 mt-0 text-right mt-5 pr-5">
@@ -27,71 +28,111 @@ function Header({location}) {
   );
 }
 
-export default function Layout (props){
- 
-    const { location, title, children } = props;
+export default function Layout(props) {
 
-    return (
-      <Container>
-        <Wrapper >
-          <LayoutContainer >
-            <div className="mx-auto" >
-              <HeaderContainer className="row mb-0 justify-content-middle">
-                <Header location={location}/>
-              </HeaderContainer>
-              <div className="row">
-                <main className="px-2 px-lg-0">{children}</main>
-              </div>
-            </div>
-          </LayoutContainer>
-          <Footer>
-          </Footer>
-        </Wrapper>
-      </Container>
-    )
+  const { location, title, children } = props;
+  const [headerClass, setHeaderClass] = useState("header-transparent");
+
+  useEffect(() => {
+    if (window) {
+      window.addEventListener("scroll", handleScroll);
+
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+  }, [])
+
+  useEffect(()=>{
+    console.log(headerClass)
+  },[headerClass])
+  const handleScroll = () => {
+    if(window.scrollY > 250 ){
+      setHeaderClass("header-white");
+    }else if(window.scrollY <= 250 ){
+      setHeaderClass("header-transparent");
+    }
   }
-  
-  const Container = styled.div`
+  return (
+    <Container>
+      <Wrapper >
+        <LayoutContainer >
+          <div className="mx-auto" >
+            <HeaderContainer >
+              <div className={classNames(headerClass, "row mb-0 justify-content-middle")}>
+                <Header location={location} />
+              </div>
+              
+            </HeaderContainer>
+            <div className="row">
+              <main className="col-12">{children}</main>
+            </div>
+          </div>
+        </LayoutContainer>
+        <Footer>
+        </Footer>
+      </Wrapper>
+    </Container>
+  )
+}
+
+const Container = styled.div`
     margin-left: 15px;
     margin-right: 15px;
   `;
 
 const LayoutContainer = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  margin-left:auto;
+  margin-right:auto;
   padding-bottom: 10rem; 
 `;
 
 const HeaderContainer = styled.div`
-  
-  position: static;
+  .header-transparent{
+    background-color:rgba(0, 0, 0, 0.2);
+
+    a{
+      color:white;
+    }
+  }
+
+  .header-white{
+    background-color:rgba(255, 255, 255, 0.5);
+    a{
+
+      color: #face11;
+    }
+  }
+ 
+  border-bottom: 1px solid rgba(255, 255, 255, .2);
+  position: fixed;
   top: 0;
   left: 0;
+  width:100%;
+  z-index:10000;
 
   a {
     text-decoration: none !important;
     box-shadow: none;
-    color: white;
     padding: 10px;
+    padding-bottom:0px;
   }
 
   a:hover{
-    color: #face11;
+    text-decoration: underline !important;
   }
 
   .logo {
     img {
-      max-width: 175px;
-      max-height: 175px;
+      max-width: 125px;
+      max-height: 125px;
     }
   }
 
   nav {
-    font-family: Roboto;
     font-weight: 400;
     font-size: 15px;
     letter-spacing: 0px;
     font-style: normal;
+
   }
 `;
 
