@@ -49,7 +49,7 @@ export default function Contact(props) {
             />
 
             <ContactContainer className="d-flex position-relative">
-                <form onSubmit={handleSubmit}>
+                <form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
                     <input type="hidden" name="form-name" value="contact" />
                     <p>
                         <label>Your Name: <input type="text" value={name} onChange={handleChange} name="name" /></label>
