@@ -39,7 +39,7 @@ export default function Contact(props) {
         e.preventDefault();
     };
 
-    const handleChange = e => this.setData({ [e.target.name]: e.target.value });
+    const handleChange = e => setData({ [e.target.name]: e.target.value });
     const { name, email, message } = data;
     return (
         <Layout location={props.location} title={siteTitle}>
