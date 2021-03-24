@@ -31,7 +31,7 @@ export default function Contact(props) {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...data })
+            body: encode({ "form-name": "contactForm", ...data })
         })
             .then(() => alert("Success!"))
             .catch(error => alert(error));
