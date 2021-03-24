@@ -7,11 +7,9 @@ ReactGA.initialize('G-GQ7PW6FH0Z');
 
 const ContactContainer = styled.div`
     top:200px;
- 
 `;
 
 export default function Contact(props) {
-
     const siteTitle = "Kick It Up A Notch Alpine and Desert Design";
     const [data, setData] = useState({ name: "", email: "", message: "" });
 
@@ -39,7 +37,7 @@ export default function Contact(props) {
         e.preventDefault();
     };
 
-    const handleChange = e => setData({ [e.target.name]: e.target.value });
+    const handleChange = e => setData({...data,[e.target.name]: e.target.value});
     const { name, email, message } = data;
     return (
         <Layout location={props.location} title={siteTitle}>
