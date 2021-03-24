@@ -8,7 +8,7 @@ import classNames from "classnames";
 const rootPath = `${__PATH_PREFIX__}/`
 const blogPath = `${__PATH_PREFIX__}/blog/`
 
-function Header({ location}) {
+function Header({ location }) {
   return (
     <>
       <div className="col-lg-1 col-4">
@@ -20,6 +20,9 @@ function Header({ location}) {
         <a href="/" className="nav-button" disabled={location.pathname === rootPath}>
           Home
         </a>
+        <Link to="/contact/" className="nav-button" disabled={location.pathname === "/contact/"}>
+          Contact
+        </Link>
         <Link to="/blog/" className="nav-button" disabled={location.pathname === "/blog/"}>
           Our Work
         </Link>
@@ -41,16 +44,14 @@ export default function Layout(props) {
     }
   }, [])
 
-  useEffect(()=>{
-    console.log(headerClass)
-  },[headerClass])
   const handleScroll = () => {
-    if(window.scrollY > 250 ){
+    if (window.scrollY > 250) {
       setHeaderClass("header-white");
-    }else if(window.scrollY <= 250 ){
+    } else if (window.scrollY <= 250) {
       setHeaderClass("header-transparent");
     }
   }
+
   return (
     <Container>
       <Wrapper >
@@ -60,7 +61,6 @@ export default function Layout(props) {
               <div className={classNames(headerClass, "row mb-0 justify-content-middle")}>
                 <Header location={location} />
               </div>
-              
             </HeaderContainer>
             <div className="row">
               <main className="col-12">{children}</main>
@@ -80,8 +80,8 @@ const Container = styled.div`
   `;
 
 const LayoutContainer = styled.div`
-  margin-left:auto;
-  margin-right:auto;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 10rem; 
 `;
 
@@ -89,15 +89,14 @@ const HeaderContainer = styled.div`
   .header-transparent{
     background-color:rgba(0, 0, 0, 0.2);
 
-    a{
-      color:white;
+    a {
+      color: white;
     }
   }
 
-  .header-white{
+  .header-white {
     background-color:rgba(255, 255, 255, 0.5);
-    a{
-
+    a {
       color: #face11;
     }
   }

@@ -39,7 +39,7 @@ export default function IndexPage(props) {
         keywords={[`desert landscaping`, `landscaping`, `landscape design`, `arizona landscape design`]}
       />
 
-      <MainContainer >
+      <MainContainer>
         <div className="blank">&nbsp;</div>
         <div className="row main-text">
           <div className="col-12">
