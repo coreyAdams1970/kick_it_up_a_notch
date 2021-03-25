@@ -5,6 +5,7 @@ backend:
 
 media_folder: content/assets
 public_folder: ../assets
+logo_url: https://kickitupdesertdesign/images/logo.png
 
 collections:
   - name: blog
