@@ -44,13 +44,12 @@ const MainContainer = styled.div`
     position:relative;
     top:-200px;
     width: 103%;
-    max-height: 400px;
+    max-height: 600px;
     margin: auto; 
   }
     .slide-img {
       width: 100%;
-      max-height: 400px;
-      height:400px;
+      max-height: 600px;
 
       img {
         width: 100%;
