@@ -62,9 +62,9 @@ export default function Layout(props) {
                 <Header location={location} />
               </div>
             </HeaderContainer>
-            <div className="row">
+            <MainContainer className="position-relative row">
               <main className="col-12">{children}</main>
-            </div>
+            </MainContainer>
           </div>
         </LayoutContainer>
         <Footer>
@@ -138,6 +138,9 @@ const HeaderContainer = styled.div`
 const Wrapper = styled.div`
   min-height: 100vh;
 `
+const MainContainer = styled.div`
+    top:200px;
+`;
 
 const Footer = styled.footer`
   text-align:center;

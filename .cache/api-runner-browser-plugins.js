@@ -1,6 +1,6 @@
 module.exports = [{
       plugin: require('../node_modules/gatsby-plugin-netlify-cms/gatsby-browser.js'),
-      options: {"plugins":[]},
+      options: {"plugins":[],"modulePath":"/Users/coreysmaller/code/kick_it_up_a_notch/src/cms/cms.js"},
     },{
       plugin: require('../node_modules/gatsby-plugin-offline/gatsby-browser.js'),
       options: {"plugins":[]},

@@ -3,6 +3,12 @@ backend:
   repo: coreyAdams1970/kick_it_up_a_notch
   branch: main
 
+  media_library:
+    name: cloudinary
+    config:
+      cloud_name: dlfhllrti
+      api_key: 248873222392649
+
 media_folder: content/assets
 public_folder: ../assets
 logo_url: https://kickitupdesertdesign/images/logo.png

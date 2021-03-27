@@ -37,7 +37,7 @@ export default function Contact(props) {
         e.preventDefault();
     };
 
-    const handleChange = e => setData({...data,[e.target.name]: e.target.value});
+    const handleChange = e => setData({ ...data, [e.target.name]: e.target.value });
     const { name, email, message } = data;
     return (
         <Layout location={props.location} title={siteTitle}>
@@ -46,23 +46,21 @@ export default function Contact(props) {
                 keywords={[`desert landscaping`, `landscaping`, `landscape design`, `arizona landscape design`]}
             />
 
-            <ContactContainer className="d-flex position-relative">
-                <form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p>
-                        <label>Your Name: <input type="text" value={name} onChange={handleChange} name="name" /></label>
-                    </p>
-                    <p>
-                        <label>Your Email: <input type="email" name="email" value={email} onChange={handleChange}/></label>
-                    </p>
-                    <p>
-                        <label>Message: <textarea name="message" value={message} onChange={handleChange}></textarea></label>
-                    </p>
-                    <p>
-                        <button type="submit">Send</button>
-                    </p>
-                </form>
-            </ContactContainer>
+            <form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
+                <input type="hidden" name="form-name" value="contact" />
+                <p>
+                    <label>Your Name: <input type="text" value={name} onChange={handleChange} name="name" /></label>
+                </p>
+                <p>
+                    <label>Your Email: <input type="email" name="email" value={email} onChange={handleChange} /></label>
+                </p>
+                <p>
+                    <label>Message: <textarea name="message" value={message} onChange={handleChange}></textarea></label>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
         </Layout>
     )
 }
