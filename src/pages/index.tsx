@@ -10,28 +10,39 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-  { url: "images/bg.png" },
+  { url: "images/bg16x9.png" },
   { url: "images/bg6.jpeg" },
   { url: "images/bg1.jpeg" },
   { url: "images/bg2.jpeg" },
   { url: "images/bg3.jpeg" },
   { url: "images/bg4.jpeg" },
-  { url: "images/bg5.jpeg" },
+  { url: "images/bg516x9.jpeg" },
 ];
 
 const settings = {
   dots: true,
   infinite: true,
   autoplay: true,
-  fade: true,
+  lazyLoad: true,
   autoplaySpeed: 5000,
   speed: 3000,
+  fade:true,
   slidesToShow: 1,
   slidesToScroll: 1,
+  className: 'slick-slider-fade',
 };
 
 const MainContainer = styled.div`
- 
+  
+  .slick-slider-fade .slick-track
+  {
+    -webkit-transform: none!important;
+    -moz-transform: none!important;
+    -ms-transform: none!important;
+    -o-transform: none!important;
+      transform: none!important;
+  }
+
   .main-text {
     text-align: justify;
     background-color: white;
