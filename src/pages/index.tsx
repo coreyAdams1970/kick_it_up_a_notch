@@ -4,45 +4,54 @@ import SEO from "../components/seo";
 import styled from "styled-components";
 import Slider from "react-slick";
 import ReactGA from 'react-ga';
+import Slideshow from "../components/slideshow";
+
 ReactGA.initialize('G-GQ7PW6FH0Z');
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const images = [
-  { url: "images/bg16x9.png" },
-  { url: "images/bg6.jpeg" },
-  { url: "images/bg1.jpeg" },
-  { url: "images/bg2.jpeg" },
-  { url: "images/bg3.jpeg" },
-  { url: "images/bg4.jpeg" },
-  { url: "images/bg516x9.jpeg" },
+  "images/bg16x9.png",
+  "images/bg6.jpeg",
+  "images/bg1.jpeg",
+  "images/bg2_16x9.jpeg",
+  "images/bg3.jpeg",
+  "images/bg4_16x9.jpeg",
+  "images/bg516x9.jpeg",
 ];
 
+const logos = [
+  "images/alpine_transparent.png", "images/desert_transparent_right.png"
+]
+
 const settings = {
-  dots: true,
+  dots: false,
   infinite: true,
   autoplay: true,
   lazyLoad: true,
   autoplaySpeed: 5000,
   speed: 3000,
-  fade:true,
+  fade: true,
   slidesToShow: 1,
   slidesToScroll: 1,
   className: 'slick-slider-fade',
 };
 
+const logo_settings = {
+  dots: false,
+  infinite: true,
+  autoplay: true,
+  lazyLoad: true,
+  autoplaySpeed: 5000,
+  speed: 3000,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  className: 'slick-slider-logo',
+};
+
 const MainContainer = styled.div`
   
-  .slick-slider-fade .slick-track
-  {
-    -webkit-transform: none!important;
-    -moz-transform: none!important;
-    -ms-transform: none!important;
-    -o-transform: none!important;
-      transform: none!important;
-  }
-
   .main-text {
     text-align: justify;
     background-color: white;
@@ -51,23 +60,10 @@ const MainContainer = styled.div`
     padding: 15px;
   }
 
-  .slide-container {
-    position:relative;
+  .slider-main-container{
+    position:absolute;
     top:-200px;
-    width: 103%;
-    max-height: 600px;
-    margin: auto; 
   }
-    .slide-img {
-      width: 100%;
-      max-height: 600px;
-
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-   
 `;
 
 export default function IndexPage(props) {
@@ -89,35 +85,13 @@ export default function IndexPage(props) {
 
       <MainContainer>
         <div className="row w-100 mb-5">
-          <div className="col-12 px-0">
-            <div className="slide-container">
-              <Slider {...settings}>
-                <div className="slide-img">
-                  <img src={images[0].url} />
-                </div>
-                <div className="slide-img">
-                  <img src={images[1].url} />
-                </div>
-                <div className="slide-img">
-                  <img src={images[2].url} />
-                </div>
-                <div className="slide-img">
-                  <img src={images[3].url} />
-                </div>
-                <div className="slide-img">
-                  <img src={images[4].url} />
-                </div>
-                <div className="slide-img">
-                  <img src={images[5].url} />
-                </div>
-                <div className="slide-img">
-                  <img src={images[6].url} />
-                </div>
-              </Slider>
-            </div>
+          <div className="col-12 px-0 slider-main-container">
+            <Slideshow wrapperClass="images-slider" images={images} settings={settings} key="image-slider" />
+            {/* <Slideshow wrapperClass="logo-slider" images={logos} settings={logo_settings}  key="logo-slider"/> */}
+
           </div>
         </div>
-        <div className="row main-text">
+        {/* <div className="row main-text">
           <div className="col-12">
             <p className="text-center">“IF A DESIGN IS TRULY ELEGANT, CLASSIC, AND PURE, IT WILL REMAIN SO FOREVER.”</p>
           </div>
@@ -131,7 +105,7 @@ export default function IndexPage(props) {
           <div className="col-12">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
             </div>
-        </div>
+        </div> */}
       </MainContainer>
     </Layout>
   )

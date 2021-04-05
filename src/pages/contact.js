@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import SEO from "../components/seo";
 import styled from "styled-components";
 import ReactGA from 'react-ga';
+import { Form, Button } from "react-bootstrap";
 ReactGA.initialize('G-GQ7PW6FH0Z');
 
 const ContactContainer = styled.div`
@@ -45,8 +46,44 @@ export default function Contact(props) {
                 title="Contact"
                 keywords={[`desert landscaping`, `landscaping`, `landscape design`, `arizona landscape design`]}
             />
+            <div className="row py-5">
+                <div className="col-12 text-center">
+                    <h3>Contact Us</h3>
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-12 col-lg-2">
 
-            <form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
+                </div>
+                <div className="col-12 col-lg-8">
+                    <Form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
+                        <input type="hidden" name="form-name" value="contact" />
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Email address</Form.Label>
+                            <Form.Control type="email" placeholder="Enter email" name="email" value={email} onChange={handleChange} />
+                            <Form.Text className="text-muted">
+                                We'll never share your email with anyone else.
+                    </Form.Text>
+                        </Form.Group>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Name</Form.Label>
+                            <Form.Control placeholder="enter your name" type="text" value={name} onChange={handleChange} name="name" />
+
+                        </Form.Group>
+                        <Form.Group controlId="formBasicEmail">
+                            <Form.Label>Message</Form.Label>
+                            <Form.Control as="textarea" rows={3} name="message" value={message} onChange={handleChange} />
+                        </Form.Group>
+                        <Button variant="primary" type="submit">
+                            Submit
+                        </Button>
+                    </Form>
+                </div>
+                <div className="col-12 col-lg-2">
+
+                </div>
+            </div>
+            {/* <form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
                 <input type="hidden" name="form-name" value="contact" />
                 <p>
                     <label>Your Name: <input type="text" value={name} onChange={handleChange} name="name" /></label>
@@ -60,7 +97,7 @@ export default function Contact(props) {
                 <p>
                     <button type="submit">Send</button>
                 </p>
-            </form>
+            </form> */}
         </Layout>
     )
 }
