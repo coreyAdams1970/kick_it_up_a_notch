@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { Link } from "gatsby"
 import styled from "styled-components";
 import "./style.scss";
-import Logo from "../../static/images/logo.png";
+import Logo from "../../static/images/logo_200.png";
 import classNames from "classnames";
 
 const rootPath = `${__PATH_PREFIX__}/`
@@ -45,9 +45,9 @@ export default function Layout(props) {
   }, [])
 
   const handleScroll = () => {
-    if (window.scrollY > 250) {
+    if (window.scrollY > 600) {
       setHeaderClass("header-white");
-    } else if (window.scrollY <= 250) {
+    } else if (window.scrollY <= 600) {
       setHeaderClass("header-transparent");
     }
   }
@@ -86,7 +86,7 @@ const LayoutContainer = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  .header-transparent{
+  .header-transparent {
     background-color:rgba(0, 0, 0, 0.2);
 
     a {
