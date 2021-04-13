@@ -22,7 +22,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   lazyLoad: true,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 5000,
   speed: 3000,
   fade: true,
   slidesToShow: 1,

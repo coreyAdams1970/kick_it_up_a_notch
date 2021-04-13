@@ -95,7 +95,8 @@ const HeaderContainer = styled.div`
   }
 
   .header-white {
-    background-color:rgba(255, 255, 255, 0.5);
+    background-color: white;
+    border-bottom: 1px solid #face11;
     a {
       color: #face11;
     }
