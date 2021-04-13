@@ -24,9 +24,9 @@ const SlideContainer = styled.div`
 }
 `;
 
-const CustomSlide = ({ index, image }) => {
+const CustomSlide = ({ image }) => {
     return (
-        <div key={index}>
+        <div>
             <img src={image} />
         </div>
     );
@@ -41,7 +41,7 @@ export default function Slideshow(props) {
     return (
         <SlideContainer className={classNames("slide-container", wrapperClass)}>
             <Slider {...settings}>
-                {images.map((image, index) => <CustomSlide image={image} index={index} />)}
+                {images.map((image, index) => <CustomSlide image={image} key={index} />)}
             </Slider>
         </SlideContainer>
     )

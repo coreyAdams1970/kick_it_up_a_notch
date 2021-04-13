@@ -37,7 +37,7 @@ export default function Layout(props) {
   const [headerClass, setHeaderClass] = useState("header-transparent");
 
   useEffect(() => {
-    if (window) {
+    if (window && location.pathname === "/") {
       window.addEventListener("scroll", handleScroll);
 
       return () => window.removeEventListener("scroll", handleScroll);
@@ -45,9 +45,9 @@ export default function Layout(props) {
   }, [])
 
   const handleScroll = () => {
-    if (window.scrollY > 600) {
+    if (window.scrollY > 534) {
       setHeaderClass("header-white");
-    } else if (window.scrollY <= 600) {
+    } else if (window.scrollY <= 534) {
       setHeaderClass("header-transparent");
     }
   }
