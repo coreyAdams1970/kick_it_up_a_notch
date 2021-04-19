@@ -6,10 +6,6 @@ import ReactGA from 'react-ga';
 import { Form, Button } from "react-bootstrap";
 ReactGA.initialize('G-GQ7PW6FH0Z');
 
-const ContactContainer = styled.div`
-    top:200px;
-`;
-
 export default function Contact(props) {
     const siteTitle = "Kick It Up A Notch Alpine and Desert Design";
     const [data, setData] = useState({ name: "", email: "", message: "" });
@@ -52,12 +48,9 @@ export default function Contact(props) {
                 </div>
             </div>
             <div className="row">
-                <div className="col-12 col-lg-2">
-
-                </div>
                 <div className="col-12 col-lg-8">
                     <Form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
-                        <input type="hidden" name="form-name" value="contact" />
+                        <input type="hidden" name="form-name" value="contactForm" />
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Email address</Form.Label>
                             <Form.Control type="email" placeholder="Enter email" name="email" value={email} onChange={handleChange} />
@@ -83,21 +76,6 @@ export default function Contact(props) {
 
                 </div>
             </div>
-            {/* <form name="contactForm" onSubmit={handleSubmit} data-netlify="true" >
-                <input type="hidden" name="form-name" value="contact" />
-                <p>
-                    <label>Your Name: <input type="text" value={name} onChange={handleChange} name="name" /></label>
-                </p>
-                <p>
-                    <label>Your Email: <input type="email" name="email" value={email} onChange={handleChange} /></label>
-                </p>
-                <p>
-                    <label>Message: <textarea name="message" value={message} onChange={handleChange}></textarea></label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form> */}
         </Layout>
     )
 }
