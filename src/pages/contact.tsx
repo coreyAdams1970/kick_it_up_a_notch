@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
-import styled from "styled-components";
 import ReactGA from 'react-ga';
 import { Form, Button } from "react-bootstrap";
-ReactGA.initialize('G-GQ7PW6FH0Z');
+ReactGA.initialize(process.env.GOOGLE_ID);
 
 export default function Contact(props) {
     const siteTitle = "Kick It Up A Notch Alpine and Desert Design";
@@ -14,7 +13,7 @@ export default function Contact(props) {
         if (typeof "window" !== "undefined") {
             ReactGA.pageview(window.location.pathname + window.location.search);
         }
-    }, [])
+    }, []);
 
     const encode = (data) => {
         return Object.keys(data)
@@ -71,9 +70,6 @@ export default function Contact(props) {
                             Submit
                         </Button>
                     </Form>
-                </div>
-                <div className="col-12 col-lg-2">
-
                 </div>
             </div>
         </Layout>
