@@ -94,6 +94,14 @@ export default function IndexPage(props) {
   useEffect(() => {
     if (typeof "window" !== "undefined") {
       ReactGA.pageview(window.location.pathname + window.location.search);
+
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', process.env.GOOGLE_ID);
+
+
     }
   }, []);
 
@@ -130,7 +138,7 @@ export default function IndexPage(props) {
             </div>
           </div>
           <div className="col-12 col-lg-6 py-3 text-center">
-            <YouTube videoId={videoId} opts={opts} onReady={onReady} containerClassName="you-tube-wrapper"/>
+            <YouTube videoId={videoId} opts={opts} onReady={onReady} containerClassName="you-tube-wrapper" />
           </div>
         </div>
       </MainContainer>
