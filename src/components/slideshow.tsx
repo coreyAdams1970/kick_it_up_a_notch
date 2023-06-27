@@ -36,8 +36,6 @@ const CustomSlide = ({ image }) => {
 export default function Slideshow(props) {
     const { images, settings, wrapperClass } = props;
 
-
-
     return (
         <SlideContainer className={classNames("slide-container", wrapperClass)}>
             <Slider {...settings}>

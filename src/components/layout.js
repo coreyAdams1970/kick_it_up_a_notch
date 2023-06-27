@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components";
 import "./style.scss";
+
+import React, { useEffect, useState } from "react"
+
+import { Link } from "gatsby"
 import Logo from "../../static/images/logo_200.png";
 import classNames from "classnames";
+import styled from "styled-components";
 
 const rootPath = `${__PATH_PREFIX__}/`
 const blogPath = `${__PATH_PREFIX__}/blog/`
@@ -23,9 +25,7 @@ function Header({ location }) {
         <Link to="/contact/" className="nav-button" disabled={location.pathname === "/contact/"}>
           Contact
         </Link>
-        <Link to="/blog/" className="nav-button" disabled={location.pathname === "/blog/"}>
-          Our Work
-        </Link>
+       
       </nav>
     </>
   );
